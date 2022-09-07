@@ -1,4 +1,16 @@
+import { useEffect } from "react";
 const Callback = () => {
+
+    useEffect(()=>{
+        if(!window.localStorage.getItem('code')){
+            const code = window.location?.search?.split('=')[1]
+            window.localStorage.setItem('code',JSON.stringify(code))
+        }
+        window.history.back()
+       
+
+    },[])
+
     return ( 
         <div>
             Hey this is a Callback page
