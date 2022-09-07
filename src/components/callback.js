@@ -6,7 +6,7 @@ const Callback = () => {
             const code = window.location?.search?.split('=')[1]
             window.localStorage.setItem('code',JSON.stringify(code))
         }
-        window.history.back()
+       
        
 
     },[])
